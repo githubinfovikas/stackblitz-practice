@@ -1,8 +1,10 @@
 const express = require('express');
 const { resolve } = require('path');
+require('dotenv').config()
+
 
 const app = express();
-const port = 3010;
+const port = process.env.PORT;
 
 app.use(express.static('static'));
 
